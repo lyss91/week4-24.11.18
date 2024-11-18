@@ -1,21 +1,19 @@
-// 11월 15일(금) 오후수업
-// 객체
-// function Student(age, member) {
-class Student {
-  constructor(_age, _member) {
-    this.age = age;
-    this.member = member;
-  }
-  // 메소드 추가
-  // this.say = function () {};
-  say() {}
-  // this.cry () => {};
-  cry() {}
-  // ts.hi () => {};
-  hi() {}
-}
+// const person = {
+//   age: 10,
+//   nickName: "홍길동",
+// };
 
-// 아럼 하면 안되요. 용도를 잘못 생각하고 코딩한것.
-// Student(10, true);
-// 함수만 보아도 new 를 사용하려는 용도임을 앎.
-new Student(15, true);
+// const a = person.age;
+// const b = person.nickName
+// 객체의 구조를 분해해서 할당한다.
+//  객체 구조 분해 할당
+// (1) const { a: age, b: nickName } = person;
+// (2) const { age: age, nickName: nickName } = person;
+// (3) const { age, nickName } = person;
+// 객체 축약형으로 (3)번째 껄로 작성하게 된다.
+const { age, nickName } = {
+  age: 10,
+  nickName: "홍길동",
+};
+// 여기 에서도 더 축약해서 위에 const person 객체를 { } 안에 넣어서 간략하게 작성한다.
+//  end
