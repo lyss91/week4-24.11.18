@@ -1,4 +1,3 @@
-// @start 11월 19일 slide-logocopy 만들고 주석 다 날림.
 // @start 11월 18일 마지막 수업 jQuery 수정
 $(document).ready(function () {
   var LOGO_DATA_URL = "/apis/logodata.json";
@@ -70,9 +69,8 @@ $(document).ready(function () {
     error: function () {},
   });
 });
-// @end 11월 18일 마지막 수업 jQuery 수정
 
-// @start  11월 19일 오전수업 jQuery 수정
+// @end 11월 18일 마지막 수업 jQuery 수정
 
 // 11월 8일 (금) html 62-93
 window.addEventListener("load", function () {
@@ -150,4 +148,71 @@ window.addEventListener("load", function () {
     .catch(function (error) {
       console.log(error);
     });
+  // @end api 주소 : json 주소가 어디니?
+
+  // @start MockDate
+  // { 이름 : 값}()
+  // { imgUrl : "경로", desc : "설명문"}
+  // [ {}, {}, {}]
+  //   const logoData = [{ imgUrl: "#", desc: "#", }, { imgUrl: "#", desc: "#", }, ];
+  //   const logoData;
+
+  // @end 11월11일 71-126 (113-128은 위에40번 으로 옮겨짐)
+
+  // const logoData = [
+  //   {
+  //     imgUrl: "logo-blog01.png",
+  //     desc: "로고",
+  //   },
+  //   {
+  //     imgUrl: "logo-blog02.png",
+  //     desc: "로고",
+  //   },
+  //   {
+  //     imgUrl: "logo-blog03.png",
+  //     desc: "로고",
+  //   },
+  //   {
+  //     imgUrl: "logo-blog04.png",
+  //     desc: "로고",
+  //   },
+  //   {
+  //     imgUrl: "logo-blog05.png",
+  //     desc: "로고",
+  //   },
+  //   {
+  //     imgUrl: "logo-blog06.png",
+  //     desc: "로고",
+  //   },
+  //   {
+  //     imgUrl: "logo-blog07.png",
+  //     desc: "로고",
+  //   },
+  //   {
+  //     imgUrl: "logo-blog08.png",
+  //     desc: "로고",
+  //   },
+  //   {
+  //     imgUrl: "logo-blog09.png",
+  //     desc: "로고",
+  //   },
+  // ];
+  // @end MockDate
+
+  // @start blog <> 블로그 변화 하는것 작업
+  // const headerLogo = new Swiper(".header-logo-motion", {
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 1500,
+  //     disableOnInteraction: false,
+  //   },
+  //   // effect: "fade",만 입력시, 겹쳐서 지저분해 진다.
+  //   effect: "fade",
+  //   // swipe API 참고 해서
+  //   fadeEffect: {
+  //     crossFade: true,
+  //   },
+  //   // fadeEffect: {crossFade: true,}, 입력시 깔끔해짐.
+  //   // @end blog <> 블로그 변화 하는것 작업
+  // @end 11월11일 -126
 });
