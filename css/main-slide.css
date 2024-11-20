@@ -1,0 +1,155 @@
+/* 11월 4일 반응형 작업 css 옮긴것 */
+.main-slide {
+  display: flex;
+  /* 20 / 1180 * 100 */
+  gap: 1.695vw;
+  /* 20 / 1180* 100 */
+}
+
+/* vw = view width // vh view height */
+.main-slide .left {
+  /* 770 나누기 1180 곱하기 100 = 65.254 */
+  width: 65.254vw;
+  max-width: 770px;
+  /* vw vh 쓰려면 max로 크기 제한 해주어야 한다. */
+  height: 39.83vw;
+  max-height: 470px;
+}
+
+.visual-slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.visual-slide a {
+  width: 100%;
+  height: 100%;
+}
+.visual-slide a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 11월 12일(화) @start 오전 추가 작업  */
+/* main-slide.css 37 - 51 */
+.visual-slide a .title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+/* 11월 12일(화) @end 오전 추가 작업 */
+
+/* 11월 8일(금) 슬라이드 작업 */
+/* .swiper-pagination-bullet-active html 통해서 찾아낸 것 */
+.visual-slide .swiper-pagination .swiper-pagination-bullet {
+  background-color: #ffffff;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: all 0.5s;
+  /* auto 플레이 넣는 것 */
+}
+
+.visual-slide .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+  width: 20px;
+}
+
+.main-slide .right {
+  /*  370 / 1180 * 100 */
+  width: 31.355vw;
+  max-width: 370px;
+  /* 470 / 1180 * 100 */
+  height: 39.83vw;
+  max-height: 470px;
+}
+.card-slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card-slide a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.card-slide a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 11월 12일(화) @start 오전 추가 작업*/
+/* main-slide.css 95-109 */
+.card-slide .title {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+/* 11월 12일(화) @end 오전 추가 작업*/
+
+.list-card-bt-wrap {
+  display: flex;
+  justify-content: center;
+}
+/* 하단 카드 슬라이드 html 336줄 */
+.mb-card-slide {
+  display: none;
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+/* js로 변경 예정 */
+/* 11월 8일 (금)작업 slide-card.js */
+.mb-card-slide-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 1160px;
+  /* background-color: red; */
+}
+
+/* 가로 너비 대비 세로가 평상시에도 변한다. */
+/* 11월 4일 반응형 작업 내용 */
+/* 상단 영역 */
+@media screen and (max-width: 1024px) {
+  .main-slide {
+    display: block;
+    gap: 0;
+  }
+  .main-slide {
+    width: 100%;
+  }
+  .main-slide .left {
+    width: 100%;
+    max-width: 100%;
+    height: 980px;
+    max-height: 980px;
+  }
+  .main-slide .right {
+    display: none;
+    /* .main-slide .right이 1024px 기준 안보이게 한다. 의미 임 */
+  }
+  /* 안보이던 하단 카드 슬라이드 보이기 */
+  .mb-card-slide {
+    display: block;
+  }
+}
